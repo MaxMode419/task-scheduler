@@ -1,15 +1,13 @@
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import TaskSection from "../task-container/task-section";
+import { useAuthContext } from "../providers/auth-provider";
 
 function Dashboard({ tasks }) {
   const navigate = useNavigate();
 
-  const user = {
-    email: "",
-    isAuthenticated: false,
-  };
+  const { isAuthenticated, user } = useAuthContext();
 
-  if (!user.isAuthenticated) return <Navigate to="/login" replace />;
+  if (!isAuthenticated) return <Navigate to="/login" replace />;
 
   return (
     <>
@@ -122,7 +120,7 @@ function Dashboard({ tasks }) {
           <section className="flex justify-between items-end">
             <div>
               <h2 className="text-4xl font-extrabold font-headline tracking-tight text-on-surface">
-                Good Morning, Alex.
+                Good Morning, {user.full_name}.
               </h2>
               <p className="text-on-surface-variant font-body mt-2">
                 You have 4 high priority tasks requiring your focus today.

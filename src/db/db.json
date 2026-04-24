@@ -1,107 +1,15 @@
 {
   "users": [
     {
-      "full_name": "Elias",
-      "email": "jose@email.com",
-      "password": "jose",
-      "id": "7yuOFvewHn0"
+      "id": "6103",
+      "email": "j@gmail.com",
+      "password": "jose"
     },
     {
-      "email": "",
-      "password": "",
-      "id": "991VYfq6OAw"
-    },
-    {
-      "email": "",
-      "password": "",
-      "id": "bEBaptQc26Y"
-    },
-    {
-      "email": "",
-      "password": "",
-      "id": "NqSF9YRPSiM"
-    },
-    {
-      "email": "",
-      "password": "",
-      "id": "Mhq1yMt3oC8"
-    },
-    {
-      "email": "",
-      "password": "",
-      "id": "fq3jABx9qDc"
-    },
-    {
-      "email": "",
-      "password": "",
-      "id": "diIY1NDwC5Y"
-    },
-    {
-      "email": "",
-      "password": "",
-      "id": "_4nRT2OoOZ0"
-    },
-    {
-      "email": "",
-      "password": "",
-      "id": "An05o9KG_VA"
-    },
-    {
-      "email": "",
-      "password": "",
-      "id": "ixXOXfdNFSA"
-    },
-    {
-      "email": "",
-      "password": "",
-      "id": "jNR3c-NospI"
-    },
-    {
-      "email": "",
-      "password": "",
-      "id": "EBQ_06RhM-s"
-    },
-    {
-      "full_name": "",
-      "email": "",
-      "password": "",
-      "id": "51m-ATCHUJo"
-    },
-    {
-      "email": "",
-      "password": "",
-      "id": "amy-MuED3qg"
-    },
-    {
-      "email": "",
-      "password": "",
-      "id": "U9iIwXTB2YE"
-    },
-    {
-      "email": "",
-      "password": "",
-      "id": "lu_rhbpRC-s"
-    },
-    {
-      "id": "bbe3",
-      "email": "",
-      "password": ""
-    },
-    {
-      "id": "41f3",
-      "email": "",
-      "password": ""
-    },
-    {
-      "id": "e3db",
-      "email": "",
-      "password": ""
-    },
-    {
-      "id": "5da7",
-      "full_name": "",
-      "email": "",
-      "password": ""
+      "id": "5b3c",
+      "full_name": "Elias John",
+      "email": "admin@gmail.com",
+      "password": "admin"
     }
   ],
   "tasks": [
