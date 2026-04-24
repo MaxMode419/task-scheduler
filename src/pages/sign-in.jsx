@@ -19,25 +19,20 @@ function Signin() {
   useEffect(() => {
     if (isAuthenticated) {
       navigate("/");
+      // console.log('is authentiated')
     }
-  }, [isAuthenticated]);
+  }, [isAuthenticated, navigate]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     e.stopPropagation();
     setLoading(true);
     try {
-      const res = await fetch(`${BASE_URL}/users?email=${formData.email}`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const res = await fetch(`${BASE_URL}/users?email=${formData.email}`);
       const data = await res.json();
-      console.log(data);
+      setUser(data[0])
 
-      toast.success("registration successful");
+      toast.success("Login successful");
     } catch (error) {
       console.log(error);
       toast.error(error.message);

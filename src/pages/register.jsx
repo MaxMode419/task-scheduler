@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 
@@ -27,7 +27,7 @@ function Register() {
         body: JSON.stringify(formData),
       });
       const data = await res.json();
-
+console.log(data)
       toast.success("registration successful");
       navigate("/login");
     } catch (error) {
