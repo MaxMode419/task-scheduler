@@ -1,0 +1,153 @@
+{
+  "jobs": [
+    {
+      "id": "0hxCWG6dmFo"
+    },
+    {
+      "id": "Y_ac_iRxsjg"
+    },
+    {
+      "jobType": "Full-Time",
+      "jobTitle": "",
+      "jobDescription": "",
+      "salary": "",
+      "location": "",
+      "companyName": "",
+      "companyDescription": "",
+      "contactEmail": "",
+      "contactPhone": "",
+      "id": "TE8euT2dRBw"
+    },
+    {
+      "jobType": "Full-Time",
+      "jobTitle": "",
+      "jobDescription": "",
+      "salary": "",
+      "location": "",
+      "companyName": "",
+      "companyDescription": "",
+      "contactEmail": "",
+      "contactPhone": "",
+      "id": "0j1pYLogE34"
+    }
+  ],
+  "users": [
+    {
+      "full_name": "Elias",
+      "email": "jose@email.com",
+      "password": "jose",
+      "id": "7yuOFvewHn0"
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": "991VYfq6OAw"
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": "bEBaptQc26Y"
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": "NqSF9YRPSiM"
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": "Mhq1yMt3oC8"
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": "fq3jABx9qDc"
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": "diIY1NDwC5Y"
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": "_4nRT2OoOZ0"
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": "An05o9KG_VA"
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": "ixXOXfdNFSA"
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": "jNR3c-NospI"
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": "EBQ_06RhM-s"
+    },
+    {
+      "full_name": "",
+      "email": "",
+      "password": "",
+      "id": "51m-ATCHUJo"
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": "amy-MuED3qg"
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": "U9iIwXTB2YE"
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": "lu_rhbpRC-s"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1",
+      "taskName": "Q4 Strategic Editiorial Review",
+      "taskDescription": "Workspace Phase 2",
+      "dueDate": "Due in 2 hours",
+      "priority": "HIGH PRIORITY",
+      "project": " "
+    },
+    {
+      "id": "2",
+      "taskName": "Audit Design System Documentation",
+      "taskDescription": "Design Ops",
+      "dueDate": "Due Tomorrow",
+      "priority": "MEDIUM",
+      "project": " "
+    },
+    {
+      "id": "3",
+      "taskName": "Weekly Team Sync & Retro",
+      "taskDescription": "Culture",
+      "dueDate": "Due Friday",
+      "priority": "Low",
+      "project": " "
+    },
+    {
+      "id": "4",
+      "taskName": "Push API Updates to Staging",
+      "taskDescription": "Core Infrastructure",
+      "dueDate": "Due in 5 hours",
+      "priority": "HIGH PRIORITY",
+      "project": " "
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
