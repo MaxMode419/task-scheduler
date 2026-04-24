@@ -1,36 +1,4 @@
 {
-  "jobs": [
-    {
-      "id": "0hxCWG6dmFo"
-    },
-    {
-      "id": "Y_ac_iRxsjg"
-    },
-    {
-      "jobType": "Full-Time",
-      "jobTitle": "",
-      "jobDescription": "",
-      "salary": "",
-      "location": "",
-      "companyName": "",
-      "companyDescription": "",
-      "contactEmail": "",
-      "contactPhone": "",
-      "id": "TE8euT2dRBw"
-    },
-    {
-      "jobType": "Full-Time",
-      "jobTitle": "",
-      "jobDescription": "",
-      "salary": "",
-      "location": "",
-      "companyName": "",
-      "companyDescription": "",
-      "contactEmail": "",
-      "contactPhone": "",
-      "id": "0j1pYLogE34"
-    }
-  ],
   "users": [
     {
       "full_name": "Elias",
@@ -113,6 +81,27 @@
       "email": "",
       "password": "",
       "id": "lu_rhbpRC-s"
+    },
+    {
+      "id": "bbe3",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "41f3",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "e3db",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "5da7",
+      "full_name": "",
+      "email": "",
+      "password": ""
     }
   ],
   "tasks": [

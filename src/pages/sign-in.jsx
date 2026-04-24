@@ -72,7 +72,7 @@ function Signin() {
         </div>
         {/* <!-- Login Card --> */}
         <div className="bg-surface-container-lowest rounded-xl p-8 md:p-12 shadow-[0_12px_40px_rgba(25,28,30,0.06)] border border-outline-variant/10">
-          <div className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label
                 className="block font-headline font-bold text-[10px] uppercase tracking-widest text-on-surface-variant mb-3 px-1"
@@ -146,9 +146,8 @@ function Signin() {
             </div>
             <div className="pt-2">
               <button
+                type="submit"
                 className="w-full hero-gradient text-surface-container-lowest font-headline font-bold py-4 rounded-xl shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-2 group"
-                // type="submit"
-                onClick={handleSubmit}
               >
                 Sign In
                 <span
@@ -159,7 +158,7 @@ function Signin() {
                 </span>
               </button>
             </div>
-          </div>
+          </form>
           <div className="mt-10 flex items-center gap-4">
             <div className="h-[1px] flex-1 bg-surface-container-highest"></div>
             <span className="font-label text-[10px] font-bold uppercase tracking-widest text-outline">
