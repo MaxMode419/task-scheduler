@@ -1,31 +1,30 @@
 import TaskContent from "./task-content";
 
-
-function TaskSection({ tasks = [] }) {
+function TaskSection({ tasks = [], onDelete }) {
+  if (!tasks.length) {
+    return (
+      <p className="text-slate-400 text-sm">
+        No tasks yet. Create your first task 🚀
+      </p>
+    );
+  }
   return (
-    <section className="grid grid-cols-12 gap-6">
-      {/* <div className="col-span-8 flex flex-col gap-4">
-        <div className="flex items-center justify-between mb-2">
-          <h3 className="font-headline font-bold text-lg tracking-tight px-2">
-            Active Tasks
-          </h3>
-          <span className="text-xs font-label uppercase tracking-widest text-on-surface-variant opacity-60">
-            Sort by Priority
-          </span>
-        </div> */}
-
+    <div className="col-span-8 flex flex-col gap-4">
       {tasks.map((task) => (
         <TaskContent
-          key={task.id}
+          key={task.id ?? task._id ?? `${task.taskName}-${task.dueDate}`}
+          id={task.id}
           taskName={task.taskName}
           taskDescription={task.taskDescription}
-          dueDate={task.dueDate}
+          // dueDate={task.dueDate}
+          startTime={task.startTime}
+          endTime={task.endTime}
           priority={task.priority}
           project={task.project}
+          onDelete={onDelete}
         />
       ))}
-      {/* </div> */}
-    </section>
+    </div>
   );
 }
 

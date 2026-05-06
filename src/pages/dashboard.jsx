@@ -1,13 +1,43 @@
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import TaskSection from "../task-container/task-section";
 import { useAuthContext } from "../providers/auth-provider";
+import { useEffect, useState } from "react";
 
-function Dashboard({ tasks }) {
+function Dashboard() {
+  const { signout } = useAuthContext();
   const navigate = useNavigate();
 
-  const { isAuthenticated, user } = useAuthContext();
+  const [tasks, setTasks] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  if (!isAuthenticated) return <Navigate to="/login" replace />;
+  const highPriorityCount = tasks.filter(
+    (task) => task?.priority?.toLowerCase() === "high",
+  ).length;
+
+  const { user } = useAuthContext();
+
+  const handleTaskDelete = (deletedTaskId) => {
+    setTasks((prevTasks) =>
+      prevTasks.filter((task) => task.id !== deletedTaskId),
+    );
+  };
+
+  useEffect(() => {
+    const fetchTasks = async () => {
+      const { id: userId } = user;
+      try {
+        const res = await fetch(`http://localhost:3000/tasks?userId=${userId}`);
+        const data = await res.json();
+        setTasks(data);
+      } catch (err) {
+        console.error("Failed to fetch tasks:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchTasks();
+  }, []);
 
   return (
     <>
@@ -22,7 +52,7 @@ function Dashboard({ tasks }) {
         </div>
         {/* <Nav /> */}
         <nav className="flex flex-col gap-1 flex-1">
-          <Link to="/dashboard">
+          <Link to="/">
             <div className="flex items-center gap-3 bg-white dark:bg-slate-800 text-slate-900 dark:text-white rounded-lg px-4 py-3 shadow-sm active:translate-x-1 duration-150 cursor-pointer">
               <span className="material-symbols-outlined">dashboard</span>
               <span className="font-manrope uppercase tracking-widest text-[10px] font-semibold">
@@ -70,7 +100,10 @@ function Dashboard({ tasks }) {
               Help
             </span>
           </div>
-          <div className="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-3 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all cursor-pointer">
+          <div
+            onClick={signout}
+            className="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-3 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all cursor-pointer"
+          >
             <span className="material-symbols-outlined">logout</span>
             <span className="font-manrope uppercase tracking-widest text-[10px] font-semibold">
               Sign Out
@@ -120,10 +153,11 @@ function Dashboard({ tasks }) {
           <section className="flex justify-between items-end">
             <div>
               <h2 className="text-4xl font-extrabold font-headline tracking-tight text-on-surface">
-                Good Morning, {user.full_name}.
+                Good Morning, {user?.full_name}.
               </h2>
               <p className="text-on-surface-variant font-body mt-2">
-                You have 4 high priority tasks requiring your focus today.
+                You have {highPriorityCount} high priority tasks requiring your
+                focus today.
               </p>
             </div>
             <div className="flex gap-2">
@@ -148,7 +182,11 @@ function Dashboard({ tasks }) {
                 </span>
               </div>
 
-              <TaskSection tasks={tasks} />
+              {loading ? (
+                <p>Loading tasks...</p>
+              ) : (
+                <TaskSection tasks={tasks} onDelete={handleTaskDelete} />
+              )}
             </div>
             {/* <!-- Right Sidebar / Bento Secondary --> */}
             <div className="col-span-4 flex flex-col gap-6">
@@ -188,8 +226,7 @@ function Dashboard({ tasks }) {
                     <div className="w-1 h-10 bg-surface-tint rounded-full"></div>
                     <div>
                       <p className="text-sm font-bold text-on-surface">
-                        Editorial Pitch Meeting
-                      </p>
+                        Editorial Pitch Meeting                      </p>
                       <p className="text-xs text-on-surface-variant">
                         09:00 AM — 10:30 AM
                       </p>

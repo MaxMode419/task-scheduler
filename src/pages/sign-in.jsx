@@ -6,7 +6,7 @@ import { useAuthContext } from "../providers/auth-provider";
 const BASE_URL = "http://localhost:3000";
 
 function Signin() {
-  const { setUser, isAuthenticated } = useAuthContext();
+  const { signin, isAuthenticated } = useAuthContext();
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: "",
@@ -30,9 +30,21 @@ function Signin() {
     try {
       const res = await fetch(`${BASE_URL}/users?email=${formData.email}`);
       const data = await res.json();
-      setUser(data[0])
+      const user = data[0];
+      if (!user) {
+        toast.error("User not found");
+        return;
+      }
+
+      if (formData.password !== user.password) {
+        toast.error("Invalid Credential");
+        return;
+      }
+
+      signin(user);
 
       toast.success("Login successful");
+      navigate("/");
     } catch (error) {
       console.log(error);
       toast.error(error.message);
@@ -71,7 +83,7 @@ function Signin() {
             <div>
               <label
                 className="block font-headline font-bold text-[10px] uppercase tracking-widest text-on-surface-variant mb-3 px-1"
-                for="email"
+                htmlFor="email"
               >
                 Email Address
               </label>
@@ -102,7 +114,7 @@ function Signin() {
               <div className="flex justify-between items-center mb-3 px-1">
                 <label
                   className="block font-headline font-bold text-[10px] uppercase tracking-widest text-on-surface-variant"
-                  for="password"
+                  htmlFor="password"
                 >
                   Password
                 </label>
@@ -120,7 +132,7 @@ function Signin() {
                   name="password"
                   placeholder="••••••••"
                   required=""
-                  type="password"
+                  type={hide ? "password" : "text"}
                   value={formData.password}
                   onChange={(e) =>
                     setFormData({
@@ -129,7 +141,10 @@ function Signin() {
                     })
                   }
                 />
-                <div className="absolute right-4 top-1/2 -translate-y-1/2 text-outline">
+                <div
+                  onClick={() => setHide(!hide)}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-outline"
+                >
                   <span
                     className="material-symbols-outlined text-[20px]"
                     data-icon="lock_open"

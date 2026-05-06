@@ -6,44 +6,81 @@
       "password": "jose"
     },
     {
-      "id": "5b3c",
-      "full_name": "Elias John",
-      "email": "admin@gmail.com",
-      "password": "admin"
+      "full_name": "Tosin",
+      "email": "danibal184@jparksky.com",
+      "password": "Sailor2394$",
+      "id": "vostPX21U6s"
+    },
+    {
+      "full_name": "Bami",
+      "email": "bami239@gmail.com",
+      "password": "bamidele",
+      "id": "MqnPdG93UYM"
+    },
+    {
+      "full_name": "John",
+      "email": "john22@gmail.com",
+      "password": "johndee",
+      "id": "10UyKOid9Fk"
+    },
+    {
+      "full_name": "Thomas",
+      "email": "thomadd2@gmail.com",
+      "password": "password",
+      "id": "Tn7sO_kImV0"
+    },
+    {
+      "full_name": "jose",
+      "email": "jose@jose.com",
+      "password": "jose",
+      "id": "MgBRdQNSL4Y"
+    },
+    {
+      "full_name": "Seun",
+      "email": "Seun@seun.com",
+      "password": "seun",
+      "id": "Zh8fKFopWZ8"
+    },
+    {
+      "full_name": "John",
+      "email": "johnsmith@gmail.com",
+      "password": "johnsmith",
+      "id": "iOJLJEJmfnQ"
     }
   ],
   "tasks": [
     {
-      "id": "1",
-      "taskName": "Q4 Strategic Editiorial Review",
+      "taskName": "Q4 Strategic Editorial Review",
       "taskDescription": "Workspace Phase 2",
-      "dueDate": "Due in 2 hours",
-      "priority": "HIGH PRIORITY",
-      "project": " "
+      "dueDate": "",
+      "startTime": "2026-05-06T08:00",
+      "endTime": "2026-05-07T10:00",
+      "priority": "high",
+      "project": "Client Onboarding",
+      "userId": "iOJLJEJmfnQ",
+      "id": "ylMcdp1AhXI"
     },
     {
-      "id": "2",
       "taskName": "Audit Design System Documentation",
-      "taskDescription": "Design Ops",
-      "dueDate": "Due Tomorrow",
-      "priority": "MEDIUM",
-      "project": " "
+      "taskDescription": "Audit Design System Documentation",
+      "dueDate": "",
+      "startTime": "2026-05-06T22:30",
+      "endTime": "2026-05-06T23:00",
+      "priority": "medium",
+      "project": "Brand Refresh",
+      "userId": "iOJLJEJmfnQ",
+      "id": "OLs0cIrQOTw"
     },
     {
-      "id": "3",
       "taskName": "Weekly Team Sync & Retro",
       "taskDescription": "Culture",
-      "dueDate": "Due Friday",
-      "priority": "Low",
-      "project": " "
-    },
-    {
-      "id": "4",
-      "taskName": "Push API Updates to Staging",
-      "taskDescription": "Core Infrastructure",
-      "dueDate": "Due in 5 hours",
-      "priority": "HIGH PRIORITY",
-      "project": " "
+      "dueDate": "",
+      "startTime": "2026-05-05T22:47",
+      "endTime": "2026-05-05T12:50",
+      "priority": "high",
+      "project": "Product Development",
+      "userId": "iOJLJEJmfnQ",
+      "id": "_DFY1DpDZEQ"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
